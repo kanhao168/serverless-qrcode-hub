@@ -1,14 +1,12 @@
-！[ 1 ] （https://github.com/user-attachments/assets/74EB9D35-59D7-4FC4-BCB1-27763DB6D45D ）在img
-
-苦于微信群聊二维码频繁变动，开发这个能生成永久二维码的工具，**不需要服务器**。基于cloudflare
-
->旧版使用的kv的免费额度太少，新版本改为基于d1存储，500万次读取够用了，建议使用旧版的及时升级，基于kv的最后版本是v1.2.0：[ readme.v1.md ]（./ readme.v1.md）
-
-##功能特性
-
--     🔗，指向微信群二维码，指向微信群二维码
-- 😋😋
-- ☁️无需服务器
-- 🎨徽标
-！[ ]上传preview-qr.png… （）
-！[上传1.jpg… ]（）
+登录 Cloudflare 并创建 D1 SQL 数据库
+复制 D1 SQL 数据库 ID
+回到 GitHub 并 Fork 仓库
+在 GitHub 打开你 Fork 的仓库的 wrangler.toml 文件，点击图中的按钮编辑
+将 d1_databases 下的 database_id 内容替换为你自己拷贝的 D1 SQL 数据库 ID
+回到 Cloudflare 并创建 Worker
+选择你 Fork 的 Github 仓库，然后直接点击右下角的 保存并部署
+等待部署成功，自动跳转到了这个页面，此时默认分配的 *.workers.dev 域名在国内访问较慢，建议绑定自己的域名
+绑定自定义域名
+设置一个你在 Cloudflare 托管的域名的子域名
+ 设置访问密码，注意密码格式为英文字母和数字，尽量长尽量复杂，推荐使用两段随机生成的uuid字符串作为密码
+ 部署成功，此时已经可以面板上通过默认分配的 *.workers.dev 或者你自定义的域名访问了！
